@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>index_schedule</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <link rel="icon" type="image/png" href="photos/nysl_logo.png"> <!-- size="16x16" --> 
+        <!--<link rel="logo" sizes="76x76" href="photos/nysl_logo.png">
+        <link rel="logo" sizes="120x120" href="photos/nysl_logo.png">
+        <link rel="logo" sizes="152x152" href="photos/nysl_logo.png">
+        <link rel="logo-image" href="photos/nysl_logo.png">-->
+       
+    <!--</head>
+	
+	<body>
+    <div  class="container-fluid main-container">
+            <div class="row">
+                <div class="col-xs-4" style="padding-left: 0px;padding-right: 0px; ">
+                    <button class=" button-nav" id="schedule-button" style="height: 65px; border: 2px solid black;" type="button"> <i class="far fa-calendar-alt fa-3x"></i></button>
+                </div>
+                <div class="col-xs-4" style="padding-left: 0px;padding-right: 0px; ">
+                        <button  class="button-active button-nav" id="players-button" style="height: 65px; border-top: 2px solid black;border-bottom: 2px solid black;border-left: none;border-right: none" type="button"><i class="far fa-user fa-3x"></i>
+                    </button>
+                </div>
+                <div class="col-xs-4" style="padding-left: 0px;padding-right: 0px;">
+                        <button  class="button-nav" id="more-button" style="height: 65px; border: 2px solid black;" type="button"><i class="far fa-plus-square fa-3x"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+        <div class="container-fluid players">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="title">
+                            <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                            Players</h1>
+                    </div>
+                </div>
+                
+                <div class="row plays">
+                    <div  class="players-buttons col-xs-3 mt-0 btn-group-vertical " role="group" aria-label="Vertical button group">
+                        <button rel="u1-players" type="button" id="u1" class="btn">U1</button>
+                        <button rel="u2-players" type="button" id="u2" class="btn">U2</button>
+                        <button rel="u3-players" type="button" id="u3" class="btn">U3</button>
+                        <button rel="u4-players" type="button" id="u4" class="btn">U4</button>
+                        <button rel="u5-players" type="button" id="u5" class="btn">U5</button>
+                        <button rel="u6-players" type="button" id="u6" class="btn">U6</button>
+                    </div>
+                    <div class="col-xs-9 list-players active" id="u1-players">
+                        <h3>U1 Players</h3>
+                        <ul class="cold-flex align-items-center">
+                            <li>Marcos Goicolea González</li>
+                            <li>Carlos López-Cortijo  Estévez</li>
+                            <li>Felipe Pérez de Ayala Rivero</li>
+                            <li>Malena García Elósegui Álamo</li>
+                            <li>Ana Cengotitabengoa Abel</li>
+                            <li>Miriam Nafría Oñate</li>
+                            <li>Nelson Gripp Pinho</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9 list-players " id="u2-players">
+                        <h3>U2 Players</h3>
+                        <ul class="cold-flex align-items-center">
+                            <li> Javier Rovira Rubio</li>
+                            <li> Ignacio Cortes Parra</li>
+                            <li> Esther Alonso Márquez</li>
+                            <li> Enrique Navarro Diaz</li>
+                            <li> Celia Font Rubio</li>
+                            <li> Pau Núñez Alvarez</li>
+                            <li> Blanca Marín Carrasco</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9 list-players " id="u3-players">
+                        <h3>U3 Players</h3>
+                        <ul class="cold-flex align-items-center">
+                            <li> Ana María Aguilar Torres</li>
+                            <li> Martín Flores Sánchez</li>
+                            <li> Adrián Domínguez Cortés</li>
+                            <li> Cristina Riera Medina</li>
+                            <li> Julia Molina Hernández</li>
+                            <li> Naia Iglesias Carrasco</li>
+                            <li>Luis Herrera Ortiz</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9 list-players " id="u4-players">
+                        <h3>U4 Players</h3>
+                        <ul class="cold-flex align-items-center">
+                            <li> Raquel Méndez Aguilar</li>
+                            <li> Rayan Vidal Hidalgo</li>
+                            <li>Abril Cano Garrido</li>
+                            <li> Óscar Bosch Flores</li>
+                            <li> Oriol Sanz García</li>
+                            <li> Rayan Moya González</li>
+                            <li> Nil Gallego Esteban</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9 list-players " id="u5-players">
+                        <h3>U5 Players</h3>
+                        <ul class="cold-flex align-items-center">
+                            <li> Isaac Gallego Gallego</li>
+                            <li> Guillermo Garrido Castro</li>
+                            <li> Asier Caballero Ruiz</li>
+                            <li> Miriam Roig Rubio</li>
+                            <li>Lucía León Medina</li>
+                            <li> Lola Sola Santiago</li>
+                            <li>Carla Campos Hernández</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9 list-players " id="u6-players">
+                        <h3>U6 Players</h3>
+                        <ul class="cold-flex align-items-center">
+                            <li> Javier Calvo Garrido</li>
+                            <li> Rubén Ramos Soler</li>
+                            <li> África Riera Arias</li>
+                            <li> Antonio Martínez Bravo</li>
+                            <li> Ainara Solé Núñez</li>
+                            <li> Mario Marín Montero</li>
+                            <li> Leire Gutiérrez Calvo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+<!--JQUERY-->
+<!--<script src="bower_componentes/jquery/jquery.js"></script>-->
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        --><!--main js-->
+        <!--<script src="js/mainJs.js"></script>-->
+<!--bootstrap-->
+        <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html> -->
