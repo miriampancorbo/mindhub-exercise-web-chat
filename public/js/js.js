@@ -293,8 +293,8 @@ function startDatabaseQueries() {
   var recentPostsRef = firebase.database().ref('posts').limitToLast(100);
   // [END recent_posts_query]
   var userPostsRef = firebase.database().ref('user-posts/' + myUserId);
-  var chat1Ref = firebase.database().ref('games-posts/' + 'chat1/' + myUserId);
-  var chat2Ref = firebase.database().ref('games-posts/' + 'chat2/' + myUserId);
+  var chat1Ref = firebase.database().ref('games-posts/' + 'chat1/' + 'posts');
+  var chat2Ref = firebase.database().ref('games-posts/' + 'chat2/' + 'posts');
 
   
   var fetchPosts = function(postsRef, sectionElement) {
