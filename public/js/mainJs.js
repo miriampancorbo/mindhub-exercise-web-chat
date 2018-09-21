@@ -1,4 +1,4 @@
-var chatClass = "";
+
 $("#schedule-button").click(function(){
     //window.location.href="index.html"
     $("#index-page").show();
@@ -28,20 +28,6 @@ $("#more-button").click(function(){
     $("#more-page").show();
     $("#more-button").addClass ("button-active");
     $("#chat-page").hide();
-});
-$(".chat1, .chat2, .chat3, .chat4, .chat5, .chat6, .chat7, .chat8, .chat9, .chat10, .chat11, .chat12, .chat12, .chat13, .chat14, .chat15, .chat16, .chat17").click(function(){
-    $("#index-page").hide();
-    $("#schedule-button").removeClass("button-active");
-    $("#chat-page").show();
-    $("#menu-chat1").show();
-    for (let i = 1; i <= 17; i++) {
-        $("#chat" + i).removeClass("chatActive");
-    }
-    chatClass = this.className;
-    this.classList.add("chatActive");
-
-    chatNumber = chatClass.replace('chat','');
-    showSection(chatSections[chatNumber-1], buttonChat1);
 });
 
 $("#u1").click(function(){

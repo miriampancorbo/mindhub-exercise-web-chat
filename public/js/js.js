@@ -29,6 +29,10 @@ var game = { "date": "Thu Mar 24 2016",
 fbRef.child("games").push(game); //Crea un código "random". Usar esto para mensajes (?)*/
 
 // Shortcuts to DOM Elements.
+var chatClass = "";
+var chatNumber;
+var chatButtom;
+
 var messageForm = document.getElementById('message-form');
 var messageInput = document.getElementById('new-post-message');
 var titleInput = document.getElementById('new-post-title');
@@ -48,8 +52,6 @@ var chatSections = [];
 for (let i = 1; i <= 17; i++) {
   chatSections.push(document.getElementById('chat' + i))
 }
-var buttonChat1 = document.getElementById('menu-chat1');
-var buttonChat2 = document.getElementById('menu-chat2');
 
 /**
  * Saves a new post to the Firebase DB.
@@ -74,7 +76,7 @@ function writeNewPost(uid, username, picture, title, body) {
   updates['/posts/' + newPostKey] = postData;
   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
   var chatActive = $('.chatActive')[0].className.replace(' chatActive', '');
-  updates['/games-posts/' + '/' + chatActive + '/' + 'posts/' + newPostKey] = postData;
+  updates['/games-posts/' + chatActive + '/' + 'posts/' + newPostKey] = postData;
   // AQUI PONER LOS COMMENTSupdates['/games/'+ gameid + '/' + 'posts-comments/' + newPostKey] = postData;
 
   return firebase.database().ref().update(updates);
@@ -177,14 +179,14 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
 
   // Listen for likes counts.
   // [START post_value_event_listener]
-  var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
+  var starCountRef = firebase.database().ref('/games-posts/' + chatClass + '/posts/'  + postId + '/starCount');
   starCountRef.on('value', function(snapshot) {
     updateStarCount(postElement, snapshot.val());
   });
   // [END post_value_event_listener]
 
   // Listen for the starred status.
-  var starredStatusRef = firebase.database().ref('posts/' + postId + '/stars/' + uid);
+  var starredStatusRef = firebase.database().ref('/games-posts/' + chatClass + '/posts/'  + postId + '/stars/' + uid);
   starredStatusRef.on('value', function(snapshot) {
     updateStarredByCurrentUser(postElement, snapshot.val());
   });
@@ -208,6 +210,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
     var gamePostRef = firebase.database().ref('/games-posts/' + chatClass + '/posts/'  + postId);
     toggleStar(globalPostRef, uid);
     toggleStar(userPostRef, uid);
+    toggleStar(gamePostRef,uid);
   };
   unStar.onclick = onStarClicked;
   star.onclick = onStarClicked;
@@ -324,6 +327,8 @@ function startDatabaseQueries() {
   fetchPosts(userPostsRef, userPostsSection);
   for (let i = 0; i < chatRefs.length; i++) {
     fetchPosts(chatRefs[i], chatSections[i]);
+    listeningFirebaseRefs.push(chatRefs[i]);
+
   }
 
   // Keep track of all Firebase refs we are listening to.
@@ -423,8 +428,6 @@ function showSection(sectionElement, buttonElement) {
   chatSections.forEach(chat => {
     chat.style.display = 'none';
   });
-  buttonChat1.classList.remove('is-active');
-  buttonChat2.classList.remove('is-active');
 
   //myTopPostsMenuButton.classList.remove('is-active');
 
@@ -439,23 +442,15 @@ function showSection(sectionElement, buttonElement) {
 
 
 
+
 // Bindings on load.
 window.addEventListener('load', function() {
+
   // Bind Sign in button.
   signInButton.addEventListener('click', function() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
   });
-
-  /*firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-  });
-}
-signInWithEmailAndPassword("mir2w@hotmail.com", "miriam")*/
-
   // Bind Sign out button.
   signOutButton.addEventListener('click', function() {
     firebase.auth().signOut();
@@ -479,12 +474,12 @@ signInWithEmailAndPassword("mir2w@hotmail.com", "miriam")*/
   };
 
   // Bind menu buttons.
-  recentMenuButton.onclick = function() {
+  /*recentMenuButton.onclick = function() {
     showSection(recentPostsSection, recentMenuButton);
   };
   myPostsMenuButton.onclick = function() {
     showSection(userPostsSection, myPostsMenuButton);
-  };
+  };*/
   /*myTopPostsMenuButton.onclick = function() {
     showSection(topUserPostsSection, myTopPostsMenuButton);
   };*/
@@ -492,6 +487,24 @@ signInWithEmailAndPassword("mir2w@hotmail.com", "miriam")*/
     showSection(addPost);
     messageInput.value = '';
     titleInput.value = '';
-  };
-  recentMenuButton.onclick();
+  };  
+  /*addPost.onclick = function(){
+    showSection(chatSections[chatNumber-1], chatButtom); 
+  
+  };*/
+  $(".chat1, .chat2, .chat3, .chat4, .chat5, .chat6, .chat7, .chat8, .chat9, .chat10, .chat11, .chat12, .chat12, .chat13, .chat14, .chat15, .chat16, .chat17").click(function(){
+    $("#index-page").hide();
+    $("#schedule-button").removeClass("button-active");
+    $("#chat-page").show();
+    for (var i = 1; i <= 17; i++) {
+        $(".chat" + i).removeClass("chatActive");
+    }
+    chatClass = this.className;
+    this.classList.add("chatActive");
+    chatButtom = this.classList.remove("is-active");
+    chatNumber = chatClass.replace('chat','');
+    showSection(chatSections[chatNumber-1], chatButtom); 
+  chatButtom.onclick();
+});
+
 }, false);
