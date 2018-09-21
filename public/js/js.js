@@ -44,7 +44,10 @@ var recentMenuButton = document.getElementById('menu-recent');
 var myPostsMenuButton = document.getElementById('menu-my-posts');
 //var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
-var chat1Section = document.getElementById('chat');
+var chatSections = [];
+for (let i = 1; i <= 17; i++) {
+  chatSections.push(document.getElementById('chat' + i))
+}
 var buttonChat1 = document.getElementById('menu-chat1');
 var buttonChat2 = document.getElementById('menu-chat2');
 
@@ -70,11 +73,10 @@ function writeNewPost(uid, username, picture, title, body) {
   var updates = {};
   updates['/posts/' + newPostKey] = postData;
   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-  
-if ($('#chat').hasClass("chatActive")){
-  updates['/games-posts/' + '/chat1' + '/' + 'posts/' + newPostKey] = postData;
+  var chatActive = $('.chatActive')[0].className.replace(' chatActive', '');
+  updates['/games-posts/' + '/' + chatActive + '/' + 'posts/' + newPostKey] = postData;
   // AQUI PONER LOS COMMENTSupdates['/games/'+ gameid + '/' + 'posts-comments/' + newPostKey] = postData;
-} 
+
   return firebase.database().ref().update(updates);
 }
 // [END write_fan_out]
@@ -287,8 +289,10 @@ function startDatabaseQueries() {
   var recentPostsRef = firebase.database().ref('posts').limitToLast(100);
   // [END recent_posts_query]
   var userPostsRef = firebase.database().ref('user-posts/' + myUserId);
-  var chat1Ref = firebase.database().ref('games-posts/' + 'chat1/' + 'posts');
-  var chat2Ref = firebase.database().ref('games-posts/' + 'chat2/' + 'posts');
+  var chatRefs = [];
+  for (var i = 1; i <= 17; i++) {
+    chatRefs.push(firebase.database().ref('games-posts/' + 'chat' + i + '/' + 'posts'));
+  }
 
   
   var fetchPosts = function(postsRef, sectionElement) {
@@ -318,7 +322,9 @@ function startDatabaseQueries() {
   fetchPosts(topUserPostsRef, topUserPostsSection);
   fetchPosts(recentPostsRef, recentPostsSection);
   fetchPosts(userPostsRef, userPostsSection);
-  fetchPosts(chat1Ref, chat1Section);
+  for (let i = 0; i < chatRefs.length; i++) {
+    fetchPosts(chatRefs[i], chatSections[i]);
+  }
 
   // Keep track of all Firebase refs we are listening to.
   listeningFirebaseRefs.push(topUserPostsRef);
@@ -347,7 +353,9 @@ function cleanupUi() {
   topUserPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
   recentPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
   userPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
-  chat1Section.getElementsByClassName('posts-container')[0].innerHTML = '';
+  chatSections.forEach(chat => {
+    chat.getElementsByClassName('posts-container')[0].innerHTML = '';
+  });
 
   // Stop all currently listening Firebase listeners.
   listeningFirebaseRefs.forEach(function(ref) {
@@ -412,7 +420,9 @@ function showSection(sectionElement, buttonElement) {
   addPost.style.display = 'none';
   recentMenuButton.classList.remove('is-active');
   myPostsMenuButton.classList.remove('is-active');
-  chat1Section.style.display = 'none';
+  chatSections.forEach(chat => {
+    chat.style.display = 'none';
+  });
   buttonChat1.classList.remove('is-active');
   buttonChat2.classList.remove('is-active');
 

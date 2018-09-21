@@ -33,10 +33,15 @@ $(".chat1, .chat2, .chat3, .chat4, .chat5, .chat6, .chat7, .chat8, .chat9, .chat
     $("#index-page").hide();
     $("#schedule-button").removeClass("button-active");
     $("#chat-page").show();
-    $("#chat").addClass ("chatActive");
     $("#menu-chat1").show();
+    for (let i = 1; i <= 17; i++) {
+        $("#chat" + i).removeClass("chatActive");
+    }
     chatClass = this.className;
-    showSection(chat1Section, buttonChat1);
+    this.classList.add("chatActive");
+
+    chatNumber = chatClass.replace('chat','');
+    showSection(chatSections[chatNumber-1], buttonChat1);
 });
 
 $("#u1").click(function(){
