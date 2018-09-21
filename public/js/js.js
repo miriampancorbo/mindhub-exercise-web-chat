@@ -44,9 +44,8 @@ var recentMenuButton = document.getElementById('menu-recent');
 var myPostsMenuButton = document.getElementById('menu-my-posts');
 //var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
-var chat1Section = document.getElementById('nuevoChat1');
+var chat1Section = document.getElementById('chat');
 var buttonChat1 = document.getElementById('menu-chat1');
-var chat2Section = document.getElementById('nuevoChat2');
 var buttonChat2 = document.getElementById('menu-chat2');
 
 /**
@@ -72,14 +71,10 @@ function writeNewPost(uid, username, picture, title, body) {
   updates['/posts/' + newPostKey] = postData;
   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
   
-if ($('#nuevoChat1').hasClass("chatActive")){
+if ($('#chat').hasClass("chatActive")){
   updates['/games-posts/' + '/chat1' + '/' + 'posts/' + newPostKey] = postData;
   // AQUI PONER LOS COMMENTSupdates['/games/'+ gameid + '/' + 'posts-comments/' + newPostKey] = postData;
 } 
-
-if ($('#nuevoChat2').hasClass("chatActive")){
-  updates['/games-posts/' + '/chat2' + '/' + 'posts/' + newPostKey] = postData;
-};
   return firebase.database().ref().update(updates);
 }
 // [END write_fan_out]
@@ -208,8 +203,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
   var onStarClicked = function() {
     var globalPostRef = firebase.database().ref('/posts/' + postId);
     var userPostRef = firebase.database().ref('/user-posts/' + authorId + '/' + postId);
-    var gamePostRef = firebase.database().ref('/games-posts/' + 'chat1' + '/posts/'  + postId);
-    var gamePostRef = firebase.database().ref('/games-posts/' + 'chat2' + '/posts/'  + postId);
+    var gamePostRef = firebase.database().ref('/games-posts/' + chatClass + '/posts/'  + postId);
     toggleStar(globalPostRef, uid);
     toggleStar(userPostRef, uid);
   };
@@ -325,7 +319,6 @@ function startDatabaseQueries() {
   fetchPosts(recentPostsRef, recentPostsSection);
   fetchPosts(userPostsRef, userPostsSection);
   fetchPosts(chat1Ref, chat1Section);
-  fetchPosts(chat2Ref, chat2Section);
 
   // Keep track of all Firebase refs we are listening to.
   listeningFirebaseRefs.push(topUserPostsRef);
@@ -355,7 +348,6 @@ function cleanupUi() {
   recentPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
   userPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
   chat1Section.getElementsByClassName('posts-container')[0].innerHTML = '';
-  chat2Section.getElementsByClassName('posts-container')[0].innerHTML = '';
 
   // Stop all currently listening Firebase listeners.
   listeningFirebaseRefs.forEach(function(ref) {
@@ -422,7 +414,6 @@ function showSection(sectionElement, buttonElement) {
   myPostsMenuButton.classList.remove('is-active');
   chat1Section.style.display = 'none';
   buttonChat1.classList.remove('is-active');
-  chat2Section.style.display = 'none';
   buttonChat2.classList.remove('is-active');
 
   //myTopPostsMenuButton.classList.remove('is-active');
@@ -491,17 +482,6 @@ signInWithEmailAndPassword("mir2w@hotmail.com", "miriam")*/
     showSection(addPost);
     messageInput.value = '';
     titleInput.value = '';
-  };
-  //CREADO PARA EL CHAT 1!!!!!!!!!!!!!!!!!!!!!!!
-  buttonChat1.onclick = function() {
-    $("#nuevoChat1").addClass ("chatActive");
-    $("#nuevoChat2").removeClass ("chatActive");
-    showSection(chat1Section, buttonChat1);
-  };
-  buttonChat2.onclick = function() {
-    $("#nuevoChat2").addClass ("chatActive");
-    $("#nuevoChat1").removeClass ("chatActive");
-    showSection(chat2Section, buttonChat2);
   };
   recentMenuButton.onclick();
 }, false);

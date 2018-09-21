@@ -1,3 +1,4 @@
+var chatClass = "";
 $("#schedule-button").click(function(){
     //window.location.href="index.html"
     $("#index-page").show();
@@ -32,6 +33,10 @@ $(".chat1, .chat2, .chat3, .chat4, .chat5, .chat6, .chat7, .chat8, .chat9, .chat
     $("#index-page").hide();
     $("#schedule-button").removeClass("button-active");
     $("#chat-page").show();
+    $("#chat").addClass ("chatActive");
+    $("#menu-chat1").show();
+    chatClass = this.className;
+    showSection(chat1Section, buttonChat1);
 });
 
 $("#u1").click(function(){
@@ -83,15 +88,6 @@ $("#u6").click(function(){
     $("#u6-players").show();
 })
 
-
-$(".chat1").click(function(){
-    $("#menu-chat1").show();
-    $("#menu-chat2").hide();
-})
-$(".chat2").click(function(){
-    $("#menu-chat2").show();
-    $("#menu-chat1").hide();
-});
 
 $("#menu-recent").click(function(){
     $("#icono-all").addClass("color-active-chat")
