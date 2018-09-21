@@ -416,9 +416,9 @@ function newPostForCurrentUser(title, text) {
 }
 
 /**
- * Displays the given section element and changes styling of the given button.
+ * Displays the given section element.
  */
-function showSection(sectionElement, buttonElement) {
+function showSection(sectionElement) {
   recentPostsSection.style.display = 'none';
   userPostsSection.style.display = 'none';
   topUserPostsSection.style.display = 'none';
@@ -429,13 +429,8 @@ function showSection(sectionElement, buttonElement) {
     chat.style.display = 'none';
   });
 
-  //myTopPostsMenuButton.classList.remove('is-active');
-
   if (sectionElement) {
     sectionElement.style.display = 'block';
-  }
-  if (buttonElement) {
-    buttonElement.classList.add('is-active');
   }
 }
 
@@ -473,25 +468,12 @@ window.addEventListener('load', function() {
     }
   };
 
-  // Bind menu buttons.
-  /*recentMenuButton.onclick = function() {
-    showSection(recentPostsSection, recentMenuButton);
-  };
-  myPostsMenuButton.onclick = function() {
-    showSection(userPostsSection, myPostsMenuButton);
-  };*/
-  /*myTopPostsMenuButton.onclick = function() {
-    showSection(topUserPostsSection, myTopPostsMenuButton);
-  };*/
   addButton.onclick = function() {
     showSection(addPost);
     messageInput.value = '';
     titleInput.value = '';
   };  
-  /*addPost.onclick = function(){
-    showSection(chatSections[chatNumber-1], chatButtom); 
-  
-  };*/
+
   $(".chat1, .chat2, .chat3, .chat4, .chat5, .chat6, .chat7, .chat8, .chat9, .chat10, .chat11, .chat12, .chat12, .chat13, .chat14, .chat15, .chat16, .chat17").click(function(){
     $("#index-page").hide();
     $("#schedule-button").removeClass("button-active");
@@ -501,10 +483,9 @@ window.addEventListener('load', function() {
     }
     chatClass = this.className;
     this.classList.add("chatActive");
-    chatButtom = this.classList.remove("is-active");
     chatNumber = chatClass.replace('chat','');
-    showSection(chatSections[chatNumber-1], chatButtom); 
-  chatButtom.onclick();
+    chatNumber = chatNumber.replace(' chatActive','');
+    showSection(chatSections[chatNumber-1]); 
 });
 
 }, false);
