@@ -44,8 +44,6 @@ var addButton = document.getElementById('add');
 var recentPostsSection = document.getElementById('recent-posts-list');
 var userPostsSection = document.getElementById('user-posts-list');
 var topUserPostsSection = document.getElementById('top-user-posts-list');
-var recentMenuButton = document.getElementById('menu-recent');
-var myPostsMenuButton = document.getElementById('menu-my-posts');
 //var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
 var chatSections = [];
@@ -423,8 +421,6 @@ function showSection(sectionElement) {
   userPostsSection.style.display = 'none';
   topUserPostsSection.style.display = 'none';
   addPost.style.display = 'none';
-  recentMenuButton.classList.remove('is-active');
-  myPostsMenuButton.classList.remove('is-active');
   chatSections.forEach(chat => {
     chat.style.display = 'none';
   });
@@ -433,7 +429,6 @@ function showSection(sectionElement) {
     sectionElement.style.display = 'block';
   }
 }
-
 
 
 
@@ -461,7 +456,7 @@ window.addEventListener('load', function() {
     var title = titleInput.value;
     if (text && title) {
       newPostForCurrentUser(title, text).then(function() {
-        myPostsMenuButton.click();
+        $(".chatActive").click();
       });
       messageInput.value = '';
       titleInput.value = '';

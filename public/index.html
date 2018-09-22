@@ -1,1092 +1,1218 @@
 <!-- -ESTE ES EL BUENO--->
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <title>index_schedule</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-        <link rel="icon" type="image/png" href="photos/nysl_logo.png"> <!-- size="16x16" --> 
-        <!--<link rel="logo" sizes="76x76" href="photos/nysl_logo.png">
-        <link rel="logo" sizes="120x120" href="photos/nysl_logo.png">
-        <link rel="logo" sizes="152x152" href="photos/nysl_logo.png">
-        <link rel="logo-image" href="photos/nysl_logo.png">-->
-       
-    </head>
-	
-	<body>
+<head>
+    <title>index_schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="photos/nysl_logo.png">
+
+</head>
+
+<body>
     <div class="all-buttons container-fluid main-container">
-            <div class="row">
-                <div class="col-xs-4 " style="padding-left: 0px;padding-right: 0px; ">
-                    <button class="button-active button-nav" id="schedule-button"  style="height: 65px; border: 2px solid black;" type="button"><i class="far fa-calendar-alt fa-3x"></i></button>
-                </div>
-                <div class="col-xs-4 " style="padding-left: 0px;padding-right: 0px; ">
-                        <button  class="button-nav" id="players-button"  style="height: 65px; border-top: 2px solid black;border-bottom: 2px solid black;border-left: none;border-right: none" type="button"><i class="far fa-user fa-3x"></i>
-                    </button>
-                </div>
-                <div class="col-xs-4 " style="padding-left: 0px;padding-right: 0px;">
-                        <button  class="button-nav" id="more-button"  style="height: 65px; border: 2px solid black;" type="button"><i class="far fa-plus-square fa-3x"></i>
-                    </button>
-                </div>
+        <div class="row">
+            <div class="col-xs-4 " style="padding-left: 0px;padding-right: 0px; ">
+                <button class="button-active button-nav" id="schedule-button" style="height: 65px; border: 2px solid black;"
+                    type="button"><i class="far fa-calendar-alt fa-3x"></i></button>
             </div>
+            <div class="col-xs-4 " style="padding-left: 0px;padding-right: 0px; ">
+                <button class="button-nav" id="players-button" style="height: 65px; border-top: 2px solid black;border-bottom: 2px solid black;border-left: none;border-right: none"
+                    type="button"><i class="far fa-user fa-3x"></i>
+                </button>
+            </div>
+            <div class="col-xs-4 " style="padding-left: 0px;padding-right: 0px;">
+                <button class="button-nav" id="more-button" style="height: 65px; border: 2px solid black;" type="button"><i
+                        class="far fa-plus-square fa-3x"></i>
+                </button>
+            </div>
+        </div>
     </div>
-    
-    <div  class="container-fluid main-container" id="index-page">
 
-            <div class="paragraphs">
-                <div class="row">
-                    <div class="col text-right">
-                        <p>All games take place on Saturday and outdoor.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-right">
-                        <p class="text-rain">Games may be shortened or cancelled <br> <i class="danger fas fa-exclamation-triangle"></i>due to extreme weather conditions.</p>
-                    </div>
+    <div class="container-fluid main-container" id="index-page">
+
+        <div class="paragraphs">
+            <div class="row">
+                <div class="col text-right">
+                    <p>All games take place on Saturday and outdoor.</p>
                 </div>
             </div>
-<!--ooooooooooooooooooooooo FIRST TIME SEPTEMBER OCTOBER ooooooooooooooooooooooooooooooooooooooooooooo-->
-            <div class="months accordion small-table" id="accordion-schedule">
-                <div class="row">
-                        <h1 class="title col">
-                        <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
-                        September </h1>
+            <div class="row">
+                <div class="col text-right">
+                    <p class="text-rain">Games may be shortened or cancelled <br> <i class="danger fas fa-exclamation-triangle"></i>due
+                        to extreme weather conditions.</p>
                 </div>
-                <div class="row">
-                    <table class="col">
-                        <thead>
-                            <tr>
-                                <th class="september">Date</th>
-                                <th>Teams</th>
-                                <th>Chat</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01/09/2018</td>
-                                <td> 
-                                    <div class="card">
-                                            <div class="card-header" id="headingOne">
-                                                <h5 class="mb-0">U1 - U4
-                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-schedule">
-                                            <div class="card-body ">
-                                                <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ Katzenmaier </a>
-                                                <br>(9:30h)</p>
-                                            </div>
-                                            </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat1" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>01/09/2018</td>
-                                <td>
+            </div>
+        </div>
+        <!--ooooooooooooooooooooooo FIRST TIME SEPTEMBER OCTOBER ooooooooooooooooooooooooooooooooooooooooooooo-->
+        <div class="months accordion small-table" id="accordion-schedule">
+            <div class="row">
+                <h1 class="title col">
+                    <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                    September </h1>
+            </div>
+            <div class="row">
+                <table class="col">
+                    <thead>
+                        <tr>
+                            <th class="september">Date</th>
+                            <th>Teams</th>
+                            <th>Chat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/09/2018</td>
+                            <td>
                                 <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h5 class="mb-0">U3 - U2
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-schedule">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">U1 - U4
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay </a>
-                                            <br>(13:00h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ
+                                                    Katzenmaier </a>
+                                                <br>(9:30h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat2" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>08/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h5 class="mb-0">U5-U6
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat1" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">U3 - U2
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager </a>
-                                            <br>(9:30h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay
+                                                </a>
+                                                <br>(13:00h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat3" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>08/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingFour">
-                                            <h5 class="mb-0">U6 - U1
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat2" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>08/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">U5-U6
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p> <a class="adress-info" href= "https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie P Hart </a>
-                                            <br>(13:00h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                    A Yeager </a>
+                                                <br>(9:30h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat4" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>15/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingFive">
-                                            <h5 class="mb-0">U2 - U4
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat3" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>08/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">U6 - U1
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North </a>
-                                            <br>(9:30h)</p>
-                                        </div>
+                                            <p> <a class="adress-info" href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie
+                                                    P Hart </a>
+                                                <br>(13:00h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat5" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>15/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingSix">
-                                            <h5 class="mb-0">U3 - U5
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat4" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                        <h5 class="mb-0">U2 - U4
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ Katzenmaier </a>
-                                            <br>(13:00h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North
+                                                </a>
+                                                <br>(9:30h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat6" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>22/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingSeven">
-                                            <h5 class="mb-0">U1 - U3
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat5" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingSix">
+                                        <h5 class="mb-0">U3 - U5
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
-                                            <br>(9:30h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ
+                                                    Katzenmaier </a>
+                                                <br>(13:00h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat7" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>22/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingEight">
-                                            <h5 class="mb-0">U2 - U6
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat6" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingSeven">
+                                        <h5 class="mb-0">U1 - U3
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager</a>
-                                            <br>(13:00h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
+                                                <br>(9:30h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat8" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>29/09/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingNine">
-                                            <h5 class="mb-0">U4 - U5
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion-schedule">
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat7" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingEight">
+                                        <h5 class="mb-0">U2 - U6
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion-schedule">
                                         <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay</a>
-                                            <br>(9:30h)</p>
-                                        </div>
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                    A Yeager</a>
+                                                <br>(13:00h)</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td>            
-                                    <button class="chat9" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat8" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29/09/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingNine">
+                                        <h5 class="mb-0">U4 - U5
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay</a>
+                                                <br>(9:30h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat9" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <div class="row">
-                    <h1 class="title col">
+            <div class="row">
+                <h1 class="title col">
                     <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
                     October</h1>
-                </div>
-
-                <div class="row october">
-                    <table class="col">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Teams</th>
-                                <th>Chat</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>06/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTen">
-                                            <h5 class="mb-0">U2 - U5 
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie P Hart</a>
-                                            <br>(9:30h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat10" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>06/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingEleven">
-                                            <h5 class="mb-0">U1 - U6 
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
-                                            <br>(13:00h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat11" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>13/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwelve">
-                                            <h5 class="mb-0">U3 - U4 
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager</a>
-                                            <br>(9:30h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat12" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>13/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThirteen">
-                                            <h5 class="mb-0">U5 - U1 
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay</a>
-                                            <br>(13:00h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat13" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>20/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingFourteen">
-                                            <h5 class="mb-0">U6 - U3
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North</a>
-                                            <br>(9:30h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat14" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>20/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingFifteen">
-                                            <h5 class="mb-0">U2 - U4
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie P Hart</a>
-                                            <br>(13:00h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat15" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>27/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingSixteen">
-                                            <h5 class="mb-0">U3 - U1
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ Katzenmaier</a>
-                                            <br>(9:30h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat16" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>27/10/2018</td>
-                                <td>
-                                    <div class="card">
-                                        <div class="card-header" id="headingSeventeen">
-                                            <h5 class="mb-0">U5 - U6
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion-schedule">
-                                        <div class="card-body ">
-                                            <p><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager</a>
-                                            <br>(13:00h)</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>            
-                                    <button class="chat17" style=" border: solid 1px; background:0; border-radius:100px;" type="button"> <i class="far fa-comments"></i></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </div>
             </div>
 
-
-<!--ooooooooooooooooooooooo SECOND TIME SEPTEMBER-OCTOBER ooooooooooooooooooooooooooooooooooooooooooooo-->
-
-            <div class="months accordion big-table" id="accordion-map">
-                        <div class="row">
-                                <h1 class="title col">
-                                <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
-                                September </h1>
-                        </div>
-                        <div class="row"> <!--september-->
-                            <table class="col ">
-                                <thead>
-                                    <tr>
-                                        <th class="september">Date</th>
-                                        <th>Teams</th>
-                                        <th>Location</th>
-                                        <th>Times</th>
-                                        <th>Chat</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01/09/2018</td>
-                                        <td> U1-U4</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading1">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ Katzenmaier </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9107.003302626215!2d-87.6318148051361!3d41.89964946612647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770265350"   allowfullscreen></iframe>
-                                                        <p class="street-text">(24 W. Walton St., Chicago, IL 60610)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat1" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>01/09/2018</td>
-                                        <td>U3-U2</td>
-                                        <td> 
-                                                <div class="card">
-                                                        <div class="card-header" id="heading4">
-                                                            <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay </a>
-                                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                                                    <i class="fas fa-angle-down plus"></i>
-                                                                </button>
-                                                            </h5>
-                                                        </div>
-                                                        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion-map">
-                                                        <div class="card-body ">
-                                                                <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489892!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770504466" allowfullscreen></iframe>        
-                                                                <p class="street-text">(1734 N. Orleans St., Chicago, IL 60614)</p>
-                                                        </div>
-                                                        </div>
-                                                </div>
-                                        </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat2" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>08/09/2018</td>
-                                        <td>U5-U6</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading7">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager  </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834" allowfullscreen></iframe>
-                                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat3" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>08/09/2018</td>
-                                        <td>U6-U1</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading11">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie P Hart</a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595264!2d-87.64808498489835!3d41.929580279218186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770620924"  allowfullscreen></iframe>
-                                                        <p class="street-text">(2625 N. Orchard St., Chicago, IL 60614)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                            </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat4" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>15/09/2018</td>
-                                        <td>U2-U4</td>
-                                        <td>
-                                            <div class="card">
-                                                <div class="card-header" id="heading14">
-                                                    <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North</a>
-                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
-                                                            <i class="fas fa-angle-down plus"></i>
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordion-map">
-                                                <div class="card-body ">
-                                                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3364882315836!2d-87.64835588489916!3d41.907124679219926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770663170" allowfullscreen></iframe>
-                                                    <p class="street-text">(1409 N. Ogden Ave., Chicago, IL 60610)</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat5" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>15/09/2018</td>
-                                        <td>U3-U5</td>
-                                        <td> 
-                                                <div class="card">
-                                                        <div class="card-header" id="heading2">
-                                                            <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ Katzenmaier </a>
-                                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                                                    <i class="fas fa-angle-down plus"></i>
-                                                                </button>
-                                                            </h5>
-                                                        </div>
-                                                        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion-map">
-                                                        <div class="card-body ">
-                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9107.003302626215!2d-87.6318148051361!3d41.89964946612647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770265350"   allowfullscreen></iframe>
-                                                            <p class="street-text">(24 W. Walton St., Chicago, IL 60610)</p>
-                                                        </div>
-                                                        </div>
-                                                </div>
-                                            </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat6" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22/09/2018</td>
-                                        <td>U1-U3</td>
-                                        <td>
-                                            <div class="card">
-                                                <div class="card-header" id="heading16">
-                                                    <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
-                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
-                                                            <i class="fas fa-angle-down plus"></i>
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordion-map">
-                                                <div class="card-body ">
-                                                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.748020309144!2d-87.65355788489867!3d41.919775279218925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770710781" allowfullscreen></iframe>
-                                                    <p class="street-text">(2101 N. Fremont St., Chicago, IL 60614)</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat7" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22/09/2018</td>
-                                        <td>U2-U6</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading8">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager  </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834" allowfullscreen></iframe>
-                                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                            </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat8" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>29/09/2018</td>
-                                        <td>U4-U5</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading5">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489892!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770504466" allowfullscreen></iframe>        
-                                                            <p class="street-text">(1734 N. Orleans St., Chicago, IL 60614)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat9" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div> <!--september 2?-->
-    
-                        <div class="row">
-                            <h1 class="title col">
-                            <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
-                            October</h1>
-                        </div>
-    
-                        <div class="row october">
-                            <table class="col">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Teams</th>
-                                        <th>Location</th>
-                                        <th>Times</th>
-                                        <th>Chat</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>06/10/2018</td>
-                                        <td>U2-U5</td>
-                                        <td> 
-                                            <div class="card">
-                                                <div class="card-header" id="heading12">
-                                                    <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie P Hart</a>
-                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                                            <i class="fas fa-angle-down plus"></i>
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion-map">
-                                                <div class="card-body ">
-                                                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595264!2d-87.64808498489835!3d41.929580279218186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770620924"  allowfullscreen></iframe>
-                                                    <p class="street-text">(2625 N. Orchard St., Chicago, IL 60614)</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat10" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>06/10/2018</td>
-                                        <td>U1-U6</td>
-                                        <td>
-                                            <div class="card">
-                                                <div class="card-header" id="heading17">
-                                                    <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
-                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
-                                                            <i class="fas fa-angle-down plus"></i>
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordion-map">
-                                                <div class="card-body ">
-                                                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.748020309144!2d-87.65355788489867!3d41.919775279218925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770710781" allowfullscreen></iframe>
-                                                    <p class="street-text">(2101 N. Fremont St., Chicago, IL 60614)</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat11" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>13/10/2018</td>
-                                        <td>U3-U4</td>
-                                        <td> 
-                                            <div class="card">
-                                                <div class="card-header" id="heading10">
-                                                    <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager  </a>
-                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                                                            <i class="fas fa-angle-down plus"></i>
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion-map">
-                                                <div class="card-body ">
-                                                        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834" allowfullscreen></iframe>
-                                                        <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat12" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>13/10/2018</td>
-                                        <td>U5-U1</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading6">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489892!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770504466" allowfullscreen></iframe>        
-                                                            <p class="street-text">(1734 N. Orleans St., Chicago, IL 60614)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat13" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20/10/2018</td>
-                                        <td>U6-U3</td>
-                                        <td>
-                                            <div class="card">
-                                                <div class="card-header" id="heading15">
-                                                    <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North</a>
-                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
-                                                            <i class="fas fa-angle-down plus"></i>
-                                                        </button>
-                                                    </h5>
-                                                </div>
-                                                <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordion-map">
-                                                <div class="card-body ">
-                                                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3364882315836!2d-87.64835588489916!3d41.907124679219926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770663170" allowfullscreen></iframe>
-                                                    <p class="street-text">(1409 N. Ogden Ave., Chicago, IL 60610)</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat14" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20/10/2018</td>
-                                        <td>U2-U4</td>
-                                        <td>
-                                        <div class="card">
-                                            <div class="card-header" id="heading13">
-                                                <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie P Hart</a>
-                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                                        <i class="fas fa-angle-down plus"></i>
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion-map">
-                                            <div class="card-body ">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595264!2d-87.64808498489835!3d41.929580279218186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770620924"  allowfullscreen></iframe>
-                                                <p class="street-text">(2625 N. Orchard St., Chicago, IL 60614)</p>
-                                            </div>
-                                            </div>
+            <div class="row october">
+                <table class="col">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Teams</th>
+                            <th>Chat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>06/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingTen">
+                                        <h5 class="mb-0">U2 - U5
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie
+                                                    P Hart</a>
+                                                <br>(9:30h)</p>
                                         </div>
-                                        </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat15" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/10/2018</td>
-                                        <td>U3-U1</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading3">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ Katzenmaier </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9107.003302626215!2d-87.6318148051361!3d41.89964946612647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770265350"   allowfullscreen></iframe>
-                                                        <p class="street-text">(24 W. Walton St., Chicago, IL 60610)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </td>
-                                        <td>9:30h</td>
-                                        <td>            
-                                            <button class="chat16" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>27/10/2018</td>
-                                        <td>U5-U6</td>
-                                        <td> 
-                                            <div class="card">
-                                                    <div class="card-header" id="heading9">
-                                                        <h5 class="mb-0"><a class="adress-info" href= "https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard A Yeager  </a>
-                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                                                                <i class="fas fa-angle-down plus"></i>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion-map">
-                                                    <div class="card-body ">
-                                                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834" allowfullscreen></iframe>
-                                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                            </td>
-                                        <td>13:00h</td>
-                                        <td>            
-                                            <button class="chat17" style=" border: solid 1px; background:0; border-radius:10px; padding:4%" type="button"> <i class="far fa-comments fa-2x"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </div> <!--october 2-->
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat10" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>06/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingEleven">
+                                        <h5 class="mb-0">U1 - U6
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
+                                                <br>(13:00h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat11" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwelve">
+                                        <h5 class="mb-0">U3 - U4
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                    A Yeager</a>
+                                                <br>(9:30h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat12" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingThirteen">
+                                        <h5 class="mb-0">U5 - U1
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay</a>
+                                                <br>(13:00h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat13" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingFourteen">
+                                        <h5 class="mb-0">U6 - U3
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North</a>
+                                                <br>(9:30h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat14" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingFifteen">
+                                        <h5 class="mb-0">U2 - U4
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie
+                                                    P Hart</a>
+                                                <br>(13:00h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat15" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingSixteen">
+                                        <h5 class="mb-0">U3 - U1
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ
+                                                    Katzenmaier</a>
+                                                <br>(9:30h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat16" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27/10/2018</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="headingSeventeen">
+                                        <h5 class="mb-0">U5 - U6
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen"
+                                        data-parent="#accordion-schedule">
+                                        <div class="card-body ">
+                                            <p><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                    A Yeager</a>
+                                                <br>(13:00h)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="chat17" style=" border: solid 1px; background:0; border-radius:100px;"
+                                    type="button"> <i class="far fa-comments"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!--ooooooooooooooooooooooo SECOND TIME SEPTEMBER-OCTOBER ooooooooooooooooooooooooooooooooooooooooooooo-->
+
+        <div class="months accordion big-table" id="accordion-map">
+            <div class="row">
+                <h1 class="title col">
+                    <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                    September </h1>
+            </div>
+            <div class="row">
+                <!--september-->
+                <table class="col ">
+                    <thead>
+                        <tr>
+                            <th class="september">Date</th>
+                            <th>Teams</th>
+                            <th>Location</th>
+                            <th>Times</th>
+                            <th>Chat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/09/2018</td>
+                            <td> U1-U4</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading1">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ
+                                                Katzenmaier </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9107.003302626215!2d-87.6318148051361!3d41.89964946612647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770265350"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(24 W. Walton St., Chicago, IL 60610)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat1" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>01/09/2018</td>
+                            <td>U3-U2</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading4">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay
+                                            </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489892!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770504466"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(1734 N. Orleans St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat2" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>08/09/2018</td>
+                            <td>U5-U6</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading7">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                A Yeager </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat3" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>08/09/2018</td>
+                            <td>U6-U1</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading11">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie
+                                                P Hart</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595264!2d-87.64808498489835!3d41.929580279218186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770620924"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2625 N. Orchard St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat4" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15/09/2018</td>
+                            <td>U2-U4</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading14">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3364882315836!2d-87.64835588489916!3d41.907124679219926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770663170"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(1409 N. Ogden Ave., Chicago, IL 60610)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat5" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15/09/2018</td>
+                            <td>U3-U5</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading2">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ
+                                                Katzenmaier </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9107.003302626215!2d-87.6318148051361!3d41.89964946612647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770265350"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(24 W. Walton St., Chicago, IL 60610)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat6" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22/09/2018</td>
+                            <td>U1-U3</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading16">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.748020309144!2d-87.65355788489867!3d41.919775279218925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770710781"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2101 N. Fremont St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat7" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22/09/2018</td>
+                            <td>U2-U6</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading8">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                A Yeager </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat8" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29/09/2018</td>
+                            <td>U4-U5</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading5">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay
+                                            </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489892!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770504466"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(1734 N. Orleans St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat9" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--september 2?-->
+
+            <div class="row">
+                <h1 class="title col">
+                    <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                    October</h1>
             </div>
 
+            <div class="row october">
+                <table class="col">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Teams</th>
+                            <th>Location</th>
+                            <th>Times</th>
+                            <th>Chat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>06/10/2018</td>
+                            <td>U2-U5</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading12">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie
+                                                P Hart</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595264!2d-87.64808498489835!3d41.929580279218186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770620924"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2625 N. Orchard St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat10" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>06/10/2018</td>
+                            <td>U1-U6</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading17">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.919775,-87.651369&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2101+N+Fremont+St+Chicago,+IL+60614+EE.+UU.">South</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.748020309144!2d-87.65355788489867!3d41.919775279218925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770710781"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2101 N. Fremont St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat11" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2018</td>
+                            <td>U3-U4</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading10">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                A Yeager </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat12" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2018</td>
+                            <td>U5-U1</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading6">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+EE.+UU./@41.913804,-87.63784,16z/data=!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=es-ES">Greenbay
+                                            </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489892!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770504466"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(1734 N. Orleans St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat13" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20/10/2018</td>
+                            <td>U6-U3</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading15">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/1409+N+Ogden+Ave,+Chicago,+IL+60610,+EE.+UU./@41.907125,-87.646167,16z/data=!4m5!3m4!1s0x880fd33af13a8945:0xb6ad1ec2b6f379ba!8m2!3d41.9071247!4d-87.6461672?hl=es-ES">North</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3364882315836!2d-87.64835588489916!3d41.907124679219926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770663170"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(1409 N. Ogden Ave., Chicago, IL 60610)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat14" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20/10/2018</td>
+                            <td>U2-U4</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading13">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps/place/2625+N+Orchard+St,+Chicago,+IL+60614,+EE.+UU./@41.92958,-87.645896,16z/data=!4m5!3m4!1s0x880fd30f2630e551:0x3e719e44a5cef714!8m2!3d41.9295803!4d-87.6458963?hl=es-ES">Marjorie
+                                                P Hart</a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595264!2d-87.64808498489835!3d41.929580279218186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770620924"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2625 N. Orchard St., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat15" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27/10/2018</td>
+                            <td>U3-U1</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading3">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.900293,-87.62905&z=14&t=m&hl=es-ES&gl=AR&mapclient=embed&q=24+W+Walton+St+Chicago,+IL+60610+EE.+UU.">AJ
+                                                Katzenmaier </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9107.003302626215!2d-87.6318148051361!3d41.89964946612647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770265350"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(24 W. Walton St., Chicago, IL 60610)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>9:30h</td>
+                            <td>
+                                <button class="chat16" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27/10/2018</td>
+                            <td>U5-U6</td>
+                            <td>
+                                <div class="card">
+                                    <div class="card-header" id="heading9">
+                                        <h5 class="mb-0"><a class="adress-info" href="https://www.google.com/maps?ll=41.923265,-87.662926&z=16&t=m&hl=es-ES&gl=AR&mapclient=embed&q=2245+N+Southport+Ave+Chicago,+IL+60614+EE.+UU.">Howard
+                                                A Yeager </a>
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                                <i class="fas fa-angle-down plus"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion-map">
+                                        <div class="card-body ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2sar!4v1533770588834"
+                                                allowfullscreen></iframe>
+                                            <p class="street-text">(2245 N. Southport Ave., Chicago, IL 60614)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>13:00h</td>
+                            <td>
+                                <button class="chat17" style=" border: solid 1px; background:0; border-radius:10px; padding:4%"
+                                    type="button"> <i class="far fa-comments fa-2x"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--october 2-->
+        </div>
 
-    </div> <!--End first container-->
+
+    </div>
+    <!--End first container-->
 
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO FINISHED INDEX PAGE OOOOOOOO-->
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO START PLAYERS PAGE OOOOOOOO-->
 
     <div class="container-fluid players main-container" id="players-page">
-            <div class="row">
-                <div class="col">
-                    <h1 class="title">
-                        <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
-                        Players</h1>
-                </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="title">
+                    <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                    Players</h1>
             </div>
-            
-            <div class="row plays">
-                <div  class="players-buttons col-xs-3 mt-0 btn-group-vertical " role="group" aria-label="Vertical button group">
-                    <button rel="u1-players" type="button" id="u1" class="btn">U1</button>
-                    <button rel="u2-players" type="button" id="u2" class="btn">U2</button>
-                    <button rel="u3-players" type="button" id="u3" class="btn">U3</button>
-                    <button rel="u4-players" type="button" id="u4" class="btn">U4</button>
-                    <button rel="u5-players" type="button" id="u5" class="btn">U5</button>
-                    <button rel="u6-players" type="button" id="u6" class="btn">U6</button>
-                </div>
-                <div class="col-xs-9 list-players active" id="u1-players">
-                    <h3>U1 Players</h3>
-                    <ul class="cold-flex align-items-center">
-                        <li>Marcos Goicolea González</li>
-                        <li>Carlos López-Cortijo  Estévez</li>
-                        <li>Felipe Pérez de Ayala Rivero</li>
-                        <li>Malena García Elósegui Álamo</li>
-                        <li>Ana Cengotitabengoa Abel</li>
-                        <li>Miriam Nafría Oñate</li>
-                        <li>Nelson Gripp Pinho</li>
-                    </ul>
-                </div>
-                <div class="col-xs-9 list-players " id="u2-players">
-                    <h3>U2 Players</h3>
-                    <ul class="cold-flex align-items-center">
-                        <li> Javier Rovira Rubio</li>
-                        <li> Ignacio Cortes Parra</li>
-                        <li> Esther Alonso Márquez</li>
-                        <li> Enrique Navarro Diaz</li>
-                        <li> Celia Font Rubio</li>
-                        <li> Pau Núñez Alvarez</li>
-                        <li> Blanca Marín Carrasco</li>
-                    </ul>
-                </div>
-                <div class="col-xs-9 list-players " id="u3-players">
-                    <h3>U3 Players</h3>
-                    <ul class="cold-flex align-items-center">
-                        <li> Ana María Aguilar Torres</li>
-                        <li> Martín Flores Sánchez</li>
-                        <li> Adrián Domínguez Cortés</li>
-                        <li> Cristina Riera Medina</li>
-                        <li> Julia Molina Hernández</li>
-                        <li> Naia Iglesias Carrasco</li>
-                        <li>Luis Herrera Ortiz</li>
-                    </ul>
-                </div>
-                <div class="col-xs-9 list-players " id="u4-players">
-                    <h3>U4 Players</h3>
-                    <ul class="cold-flex align-items-center">
-                        <li> Raquel Méndez Aguilar</li>
-                        <li> Rayan Vidal Hidalgo</li>
-                        <li>Abril Cano Garrido</li>
-                        <li> Óscar Bosch Flores</li>
-                        <li> Oriol Sanz García</li>
-                        <li> Rayan Moya González</li>
-                        <li> Nil Gallego Esteban</li>
-                    </ul>
-                </div>
-                <div class="col-xs-9 list-players " id="u5-players">
-                    <h3>U5 Players</h3>
-                    <ul class="cold-flex align-items-center">
-                        <li> Isaac Gallego Gallego</li>
-                        <li> Guillermo Garrido Castro</li>
-                        <li> Asier Caballero Ruiz</li>
-                        <li> Miriam Roig Rubio</li>
-                        <li>Lucía León Medina</li>
-                        <li> Lola Sola Santiago</li>
-                        <li>Carla Campos Hernández</li>
-                    </ul>
-                </div>
-                <div class="col-xs-9 list-players " id="u6-players">
-                    <h3>U6 Players</h3>
-                    <ul class="cold-flex align-items-center">
-                        <li> Javier Calvo Garrido</li>
-                        <li> Rubén Ramos Soler</li>
-                        <li> África Riera Arias</li>
-                        <li> Antonio Martínez Bravo</li>
-                        <li> Ainara Solé Núñez</li>
-                        <li> Mario Marín Montero</li>
-                        <li> Leire Gutiérrez Calvo</li>
-                    </ul>
-                </div>
+        </div>
+
+        <div class="row plays">
+            <div class="players-buttons col-xs-3 mt-0 btn-group-vertical " role="group" aria-label="Vertical button group">
+                <button rel="u1-players" type="button" id="u1" class="btn">U1</button>
+                <button rel="u2-players" type="button" id="u2" class="btn">U2</button>
+                <button rel="u3-players" type="button" id="u3" class="btn">U3</button>
+                <button rel="u4-players" type="button" id="u4" class="btn">U4</button>
+                <button rel="u5-players" type="button" id="u5" class="btn">U5</button>
+                <button rel="u6-players" type="button" id="u6" class="btn">U6</button>
             </div>
+            <div class="col-xs-9 list-players active" id="u1-players">
+                <h3>U1 Players</h3>
+                <ul class="cold-flex align-items-center">
+                    <li>Marcos Goicolea González</li>
+                    <li>Carlos López-Cortijo Estévez</li>
+                    <li>Felipe Pérez de Ayala Rivero</li>
+                    <li>Malena García Elósegui Álamo</li>
+                    <li>Ana Cengotitabengoa Abel</li>
+                    <li>Miriam Nafría Oñate</li>
+                    <li>Nelson Gripp Pinho</li>
+                </ul>
+            </div>
+            <div class="col-xs-9 list-players " id="u2-players">
+                <h3>U2 Players</h3>
+                <ul class="cold-flex align-items-center">
+                    <li> Javier Rovira Rubio</li>
+                    <li> Ignacio Cortes Parra</li>
+                    <li> Esther Alonso Márquez</li>
+                    <li> Enrique Navarro Diaz</li>
+                    <li> Celia Font Rubio</li>
+                    <li> Pau Núñez Alvarez</li>
+                    <li> Blanca Marín Carrasco</li>
+                </ul>
+            </div>
+            <div class="col-xs-9 list-players " id="u3-players">
+                <h3>U3 Players</h3>
+                <ul class="cold-flex align-items-center">
+                    <li> Ana María Aguilar Torres</li>
+                    <li> Martín Flores Sánchez</li>
+                    <li> Adrián Domínguez Cortés</li>
+                    <li> Cristina Riera Medina</li>
+                    <li> Julia Molina Hernández</li>
+                    <li> Naia Iglesias Carrasco</li>
+                    <li>Luis Herrera Ortiz</li>
+                </ul>
+            </div>
+            <div class="col-xs-9 list-players " id="u4-players">
+                <h3>U4 Players</h3>
+                <ul class="cold-flex align-items-center">
+                    <li> Raquel Méndez Aguilar</li>
+                    <li> Rayan Vidal Hidalgo</li>
+                    <li>Abril Cano Garrido</li>
+                    <li> Óscar Bosch Flores</li>
+                    <li> Oriol Sanz García</li>
+                    <li> Rayan Moya González</li>
+                    <li> Nil Gallego Esteban</li>
+                </ul>
+            </div>
+            <div class="col-xs-9 list-players " id="u5-players">
+                <h3>U5 Players</h3>
+                <ul class="cold-flex align-items-center">
+                    <li> Isaac Gallego Gallego</li>
+                    <li> Guillermo Garrido Castro</li>
+                    <li> Asier Caballero Ruiz</li>
+                    <li> Miriam Roig Rubio</li>
+                    <li>Lucía León Medina</li>
+                    <li> Lola Sola Santiago</li>
+                    <li>Carla Campos Hernández</li>
+                </ul>
+            </div>
+            <div class="col-xs-9 list-players " id="u6-players">
+                <h3>U6 Players</h3>
+                <ul class="cold-flex align-items-center">
+                    <li> Javier Calvo Garrido</li>
+                    <li> Rubén Ramos Soler</li>
+                    <li> África Riera Arias</li>
+                    <li> Antonio Martínez Bravo</li>
+                    <li> Ainara Solé Núñez</li>
+                    <li> Mario Marín Montero</li>
+                    <li> Leire Gutiérrez Calvo</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO FINISHED PLAYERS PAGE OOOOOOOO-->
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO START "MORE" PAGE OOOOOOOO-->
 
-    <div class="container more main-container"  id="more-page"><!-- fuid??? --> 
+    <div class="container more main-container" id="more-page">
+        <!-- fuid??? -->
         <div class="row">
             <div class="col">
                 <h1 class="title">
-                        <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
-                        Contact</h1>
-                        <p class="text-justify">If you have any questions, please, call or send a WhatsApp to Michael Randall, League Coordinator.</p>
-                        <p class="external-info"><a href="tel:(630)690-8132">(630)690-8132</a><a href="https://api.whatsapp.com/send?phone=3606908132"><span class="whats"><i class="fab fa-whatsapp"></i></span></a></p>
+                    <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                    Contact</h1>
+                <p class="text-justify">If you have any questions, please, call or send a WhatsApp to Michael Randall,
+                    League Coordinator.</p>
+                <p class="external-info"><a href="tel:(630)690-8132">(630)690-8132</a><a href="https://api.whatsapp.com/send?phone=3606908132"><span
+                            class="whats"><i class="fab fa-whatsapp"></i></span></a></p>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <h1 class="title">
-                        <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
-                        Official Web Page</h1>
-                        <p>For more information, visit the Official Web Page.
-                        <br>There, you will find:                            
-                    </p>
+                    <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                    Official Web Page</h1>
+                <p>For more information, visit the Official Web Page.
+                    <br>There, you will find:
+                </p>
 
-                            <ul>
-                                <li>Upcoming Events</li>
-                                <li>Mission and Vision</li>
-                                <li>Rules</li>
-                                <li>Game Information</li>
-                                <li>Registration Form</li>
-                                <li>Contact</li>
-                            </ul>
-                        <p class="external-info"><a href="https://www.google.com">www.nysl.com</a></p>
+                <ul>
+                    <li>Upcoming Events</li>
+                    <li>Mission and Vision</li>
+                    <li>Rules</li>
+                    <li>Game Information</li>
+                    <li>Registration Form</li>
+                    <li>Contact</li>
+                </ul>
+                <p class="external-info"><a href="https://www.google.com">www.nysl.com</a></p>
             </div>
         </div>
     </div>
@@ -1095,213 +1221,212 @@
     <!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO START "CHAT" PAGE OOOOOOOO-->
 
     <div class="container-fluid m-0 p-0" id="chat-page" style="padding: 0px; margin-left:auto; margin-right:auto; width:90%; display: none;">
-            <!doctype html>
-            <html lang="en">
-            <head>
-              <meta charset="utf-8">
-              <meta http-equiv="X-UA-Compatible" content="IE=edge">
-              <meta name="description" content="Demonstrates the use of Google Cloud Database with a Firebase DB">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Firebase Database Quickstart</title>
-            
-              <!--Los copiados del index:-->
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta name="mobile-web-app-capable" content="yes">
-              <meta name="apple-mobile-web-app-capable" content="yes">
-              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-              <link rel="stylesheet" href="css/main.css">
-              <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-              <link rel="icon" type="image/png" href="photos/nysl_logo.png">
-            
-              <!-- Disable tap highlight on IE -->
-              <meta name="msapplication-tap-highlight" content="no">
-            
-              <!-- Add to homescreen for Chrome on Android -->
-              <meta name="mobile-web-app-capable" content="yes">
-              <meta name="application-name" content="Firebase Database Quickstart">
-              <meta name="theme-color" content="#303F9F">
-            
-              <!-- Add to homescreen for Safari on iOS -->
-              <meta name="apple-mobile-web-app-capable" content="yes">
-              <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-              <meta name="apple-mobile-web-app-title" content="Firebase Database Quickstart">
-              <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
-            
-              <!-- Tile icon for Win8 -->
-              <meta name="msapplication-TileColor" content="#3372DF">
-              <meta name="msapplication-navbutton-color" content="#303F9F">
-            
-              <!-- Material Design Lite -->
-              <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-              <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
-              <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-            
-            </head>
-            <body id="other-page" class="sin-margen-ni-padding">
-            <div class="container fixed-header sin-margen-ni-padding m-0 p-0" style="padding:0; margin:0">
-            
-            
-              <!-- Splash screen -->
-              <section id="page-splash" class="row" style="margin-top:5%" align="center">
-                <div class="bar-top-chat sin-margen-ni-padding m-0 p-0" style="padding:0; margin:auto; margin-bottom:5%">
-                    <h3 class="logo col-xs-11 sin-margen-ni-padding"><b>Login</b> </h3>
-                </div>
-                <div class=" bar-top-chat m-0 p-0 col-xs-12">
-                  <button id="sign-in-button" class="sin-margen-ni-padding mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect" style="width:100%; background-color:rgb(211, 255, 200)"><i class="material-icons">account_circle</i> Sign in with Google</button>
-                </div>
-              </section>
-            
-              <!-- Header section containing logo and menu -->
-              <header id = "header-chat"  style="padding:0; margin:auto">
-                <div class="row bar-top-chat sin-margen-ni-padding m-0 p-0"style="margin-bottom:4%;  margin-top:3%">
-                    <h3 class="col-xs-12 col-sm-10" style="margin:0;">Chat for all matches</h3>
-                    <button id="sign-out-button" class="sin-margen-ni-pading col-xs-12 col-sm-2 mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect" style="background-color: rgb(235, 154, 123); border: solid 2px black"><i class="material-icons">account_circle</i> Sign out</button>
-                </div>
-            
-                <!-- Navigation Bar -->
-                <div class="tab row bar-top-chat sin-margen-ni-padding m-0 p-0" style="background-color: #004d4d; color:white; margin-right:0">
-                  <div >
+        <!doctype html>
+        <html lang="en">
 
-                    <div id="menu-recent" class="color-active-chat col-xs-3 is-active  mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                      <i id="icono-all" class="material-icons color-active-chat ">new_releases</i> Posts of all matches
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="description" content="Demonstrates the use of Google Cloud Database with a Firebase DB">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Chat for Matches</title>
+
+            <!--Los copiados del index:-->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/main.css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+                crossorigin="anonymous">
+            <link rel="icon" type="image/png" href="photos/nysl_logo.png">
+
+            <!-- Disable tap highlight on IE -->
+            <meta name="msapplication-tap-highlight" content="no">
+
+            <!-- Add to homescreen for Chrome on Android -->
+            <meta name="mobile-web-app-capable" content="yes">
+            <meta name="application-name" content="Chat for Matches">
+            <meta name="theme-color" content="#303F9F">
+
+            <!-- Add to homescreen for Safari on iOS -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+            <meta name="apple-mobile-web-app-title" content="Chat for Matches">
+            <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+
+            <!-- Tile icon for Win8 -->
+            <meta name="msapplication-TileColor" content="#3372DF">
+            <meta name="msapplication-navbutton-color" content="#303F9F">
+
+            <!-- Material Design Lite -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+            <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+        </head>
+
+        <body id="other-page" class="sin-margen-ni-padding">
+            <div class="container fixed-header sin-margen-ni-padding m-0 p-0" style="padding:0; margin:0">
+
+
+                <!-- Splash screen -->
+                <section id="page-splash" class="row" style="margin-top:5%" align="center">
+                    <div class="bar-top-chat sin-margen-ni-padding m-0 p-0" style="padding:0; margin:auto; margin-bottom:5%">
+                        <h3 class="logo col-xs-11 sin-margen-ni-padding"><b>Login</b> </h3>
                     </div>
-                    <div id="menu-my-posts" class="col-xs-3 sin-margen-ni-padding mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                      <i id="icono-mine" class="material-icons">pan_tool</i> All my posts
+                    <div class=" bar-top-chat m-0 p-0 col-xs-12">
+                        <button id="sign-in-button" class="sin-margen-ni-padding mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"
+                            style="width:100%; background-color:rgb(211, 255, 200)"><i class="material-icons">account_circle</i>
+                            Sign in with Google</button>
                     </div>
-                    <button class="col-xs-2 sin-margen-ni-padding mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effec" style="margin-left:5%" id="add">
-                        <i class="material-icons">mode_edit</i>
-                    </button>
-                    <!--<div id="menu-my-top-posts" class="col-xs mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
-                      <i class="material-icons">trending_up</i> My top posts
-                    </div>-->
-                  </div>
-                </div>
-              </header>
-            
-              <main class="mdl-layout__content mdl-color--grey-100">
-            
-                <!-- Show the add post form -->
-                <section class="mdl-grid content" id="add-post" style="display:none">
-                    <div class="mdl-cell mdl-cell--12-col mdl-grid">
-              
-                        <!-- Card containing the inputs to add a new messages -->
-                        <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
-                                mdl-cell--6-col-desktop">
-                          <div class="mdl-card__title mdl-color--yellow-600 mdl-color-text--white">
-                            <h2 class="mdl-card__title-text">New Post</h2>
-                          </div>
-                          <div class="mdl-card__supporting-text mdl-color-text--blue-600">
-                            <form id="message-form" action="#">
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="new-post-title">
-                                <label class="mdl-textfield__label" for="new-post-title">Post title...</label>
-                              </div>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <textarea class="mdl-textfield__input" rows="3" id="new-post-message"></textarea>
-                                <label class="mdl-textfield__label" for="new-post-message">Post message...</label>
-                              </div>
-                              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                                Add post
+                </section>
+
+                <!-- Header section containing logo and menu -->
+                <header id="header-chat" style="padding:0; margin:auto">
+                    <div class="row bar-top-chat sin-margen-ni-padding m-0 p-0" style="margin-bottom:4%;  margin-top:3%">
+                        <h3 class="col-xs-12 col-sm-10" style="margin:0;">Chat for all matches</h3>
+                        <button id="sign-out-button" class="sin-margen-ni-pading col-xs-12 col-sm-2 mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"
+                            style="background-color: rgb(235, 154, 123); border: solid 2px black"><i class="material-icons">account_circle</i>
+                            Sign out</button>
+                    </div>
+
+                    <!-- Navigation Bar -->
+                    <div class="tab row bar-top-chat sin-margen-ni-padding m-0 p-0" style="background-color: #004d4d; color:white; margin-right:0">
+                        <div>
+                            <button class="col-xs-2 sin-margen-ni-padding mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effec"
+                                style="margin-left:5%" id="add">
+                                <i class="material-icons">mode_edit</i>
                             </button>
-                          </form>
                         </div>
                     </div>
-                  </div>
-                </section>
-            
-                <!-- Show a list of recent posts -->
-                <section class="sin-margen-ni-padding mdl-grid content" id="recent-posts-list" style="display:none; padding:0; margin:auto;">
-                  <div class="sin-margen-ni-padding posts-container mdl-cell mdl-cell--12-col mdl-grid" style="padding:0; margin:0">
-                  </div>
-                </section>
-            
-                <!-- Show the list of user's posts -->
-                <section class="sin-margen-ni-padding mdl-grid content" id="user-posts-list" style="display:none; padding:0; margin:auto">
-                  <div class="sin-margen-ni-padding posts-container mdl-cell mdl-cell--12-col mdl-grid mr-0 ml-0" style="padding:0; margin:0">
-                  </div>
-                </section>
-            
-                <!-- Show the list of top user's posts -->
-                <section class="sin-margen-ni-padding mdl-grid content" id="top-user-posts-list" style="display:none; padding:0; margin:auto">
-                  <div class="sin-margen-ni-padding posts-container mdl-cell mdl-cell--12-col mdl-grid " style="padding:0; margin:0">
-                  </div>
-                </section>
-                <!--/*AQUIShow Chat 1-->
-                <section class="mdl-grid content" id="chat1" style="display:none">
-                    <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
-                    </div>
-                </section>
-                <section class="mdl-grid content" id="chat2" style="display:none">
+                </header>
+
+                <main class="mdl-layout__content mdl-color--grey-100">
+
+                    <!-- Show the add post form -->
+                    <section class="mdl-grid content" id="add-post" style="display:none">
+                        <div class="mdl-cell mdl-cell--12-col mdl-grid">
+
+                            <!-- Card containing the inputs to add a new messages -->
+                            <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
+                                mdl-cell--6-col-desktop">
+                                <div class="mdl-card__title mdl-color--yellow-600 mdl-color-text--white">
+                                    <h2 class="mdl-card__title-text">New Post</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text mdl-color-text--blue-600">
+                                    <form id="message-form" action="#">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="new-post-title">
+                                            <label class="mdl-textfield__label" for="new-post-title">Post title...</label>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <textarea class="mdl-textfield__input" rows="3" id="new-post-message"></textarea>
+                                            <label class="mdl-textfield__label" for="new-post-message">Post message...</label>
+                                        </div>
+                                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                            Add post
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Show a list of recent posts -->
+                    <section class="sin-margen-ni-padding mdl-grid content" id="recent-posts-list" style="display:none; padding:0; margin:auto;">
+                        <div class="sin-margen-ni-padding posts-container mdl-cell mdl-cell--12-col mdl-grid" style="padding:0; margin:0">
+                        </div>
+                    </section>
+
+                    <!-- Show the list of user's posts -->
+                    <section class="sin-margen-ni-padding mdl-grid content" id="user-posts-list" style="display:none; padding:0; margin:auto">
+                        <div class="sin-margen-ni-padding posts-container mdl-cell mdl-cell--12-col mdl-grid mr-0 ml-0"
+                            style="padding:0; margin:0">
+                        </div>
+                    </section>
+
+                    <!-- Show the list of top user's posts -->
+                    <section class="sin-margen-ni-padding mdl-grid content" id="top-user-posts-list" style="display:none; padding:0; margin:auto">
+                        <div class="sin-margen-ni-padding posts-container mdl-cell mdl-cell--12-col mdl-grid " style="padding:0; margin:0">
+                        </div>
+                    </section>
+                    <!--/*AQUIShow Chat 1-->
+                    <section class="mdl-grid content" id="chat1" style="display:none; margin:0; padding:0">
+                        <div class="posts-container col-xs-12 mdl-grid" style="margin:0; padding:0">
+                        </div>
+                    </section>
+                    <section class="mdl-grid content" id="chat2" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat3" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat3" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat4" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat4" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat5" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat5" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat6" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat6" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat7" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat7" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat8" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat8" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat9" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat9" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat10" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat10" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat11" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat11" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat12" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat12" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat13" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat13" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat14" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat14" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat15" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat15" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat16" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat16" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-                <section class="mdl-grid content" id="chat17" style="display:none">
+                    </section>
+                    <section class="mdl-grid content" id="chat17" style="display:none">
                         <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
                         </div>
-                </section>
-              </main>
+                    </section>
+                </main>
             </div>
-            
-            
-            
+
+
+
             <!-- Import and configure the Firebase SDK -->
             <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
             <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
@@ -1309,31 +1434,37 @@
             <script src="/__/firebase/5.5.0/firebase-auth.js"></script>
             <script src="/__/firebase/5.5.0/firebase-database.js"></script>
             <script src="/__/firebase/init.js"></script>
-            
+
             <script src="scripts/main.js"></script>
-            
+
             <!--JQUERY-->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
             <!--main js-->
-                    <script src="js/mainJs.js"></script>
+            <script src="js/mainJs.js"></script>
             <!--long js chat-->
-                    <script src="js/js.js"></script>
+            <script src="js/js.js"></script>
             <!--bootstrap-->
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-                </body>
-             </html>
-        </div>
-             
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous"></script>
+        </body>
+
+        </html>
+    </div>
+
 
     <!--FINNNNN CONTENIDO-->
 
-<!--JQUERY-->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!--main js-->
-        <script src="js/mainJs.js"></script>
-<!--long js chat-->
-        <script src="js/js.js"></script>
-<!--bootstrap-->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    </body>
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!--main js-->
+    <script src="js/mainJs.js"></script>
+    <!--long js chat-->
+    <script src="js/js.js"></script>
+    <!--bootstrap-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
