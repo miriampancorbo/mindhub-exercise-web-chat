@@ -29,7 +29,6 @@ var game = { "date": "Thu Mar 24 2016",
 fbRef.child("games").push(game); //Crea un código "random". Usar esto para mensajes (?)*/
 
 // Shortcuts to DOM Elements.
-var chatClass = "";
 var chatNumber;
 var chatButtom;
 
@@ -175,7 +174,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
     deleteComment(postElement, data.key);
   });
   // [END child_event_listener_recycler]
-
+  var chatClass =  $('.chatActive')[0].className.replace(' chatActive', '');
   // Listen for likes counts.
   // [START post_value_event_listener]
   var starCountRef = firebase.database().ref('/games-posts/' + chatClass + '/posts/'  + postId + '/starCount');
