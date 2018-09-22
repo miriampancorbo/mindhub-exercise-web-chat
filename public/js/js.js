@@ -44,6 +44,7 @@ var addButton = document.getElementById('add');
 var recentPostsSection = document.getElementById('recent-posts-list');
 var userPostsSection = document.getElementById('user-posts-list');
 var topUserPostsSection = document.getElementById('top-user-posts-list');
+var chatTitle = document.getElementById('chat-title');
 //var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
 var chatSections = [];
@@ -386,13 +387,17 @@ function onAuthStateChanged(user) {
   if (user) {
     currentUID = user.uid;
     splashPage.style.display = 'none';
+    signOutButton.style.display = '';
+    addButton.style.display = '';
     writeUserData(user.uid, user.displayName, user.email, user.photoURL);
     startDatabaseQueries();
   } else {
     // Set currentUID to null.
     currentUID = null;
     // Display the splash page where you can sign-in.
+    addButton.style.display = 'none';
     splashPage.style.display = '';
+    signOutButton.style.display = 'none';
   }
 }
 
@@ -473,14 +478,31 @@ window.addEventListener('load', function() {
     $("#index-page").hide();
     $("#schedule-button").removeClass("button-active");
     $("#chat-page").show();
-    for (var i = 1; i <= 17; i++) {
-        $(".chat" + i).removeClass("chatActive");
-    }
-    chatClass = this.className;
+    setAllChatsAsNotActive();
     this.classList.add("chatActive");
-    chatNumber = chatClass.replace('chat','');
-    chatNumber = chatNumber.replace(' chatActive','');
+    chatNumber = getChatNumber(this.className);
     showSection(chatSections[chatNumber-1]); 
+    setChatTitle(this);
 });
 
 }, false);
+
+function setAllChatsAsNotActive() {
+  for (var i = 1; i <= 17; i++) {
+    $(".chat" + i).removeClass("chatActive");
+  }
+}
+
+function getChatNumber(chatClass) {
+  var chatNumber = chatClass.replace('chat', '');
+  chatNumber = chatNumber.replace(' chatActive', '');
+  return chatNumber;
+}
+
+function setChatTitle(that) {
+  var buttonSiblings = that.parentElement.parentElement.children;
+  var currentChatDate = buttonSiblings[0].textContent;
+  var currentChatTeamName = buttonSiblings[1].textContent;
+  chatTitle.innerText = 'Chat for ' + currentChatTeamName + ' (' + currentChatDate + ')';
+}
+
