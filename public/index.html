@@ -1290,7 +1290,7 @@
                 <header id="header-chat" style="padding:0; margin:auto">
                     <div class="row " style="margin-top:3%">
                             <h1 class="title col">
-                                <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
+                                <img id="logo-chat" class="photo-logo" src="photos/nysl_logo.png" alt="logo">
                                 <span id="chat-title"></span> </h1>
                         </div>
                         <button id="sign-out-button" class="col-xs-12 col-sm-4 col-md-2 mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"  align="right" 
@@ -1299,16 +1299,16 @@
                     </div>
 
                     <!-- Navigation Bar -->
-                    <div class="tab row bar-top-chat  align-items-center" style="background-color: rgb(211, 255, 200); color:#004d4d; margin-right:auto; margin-left:auto; margin-bottom:2%">
+                    <div id="bar-chat" class="tab row bar-top-chat  align-items-center" style="background-color: rgb(211, 255, 200); color:#004d4d; margin-right:auto; margin-left:auto; margin-bottom:2%">
                         <p class="col-xs align-items-center" align="center" style="font-size:130%; font-weight: bold; margin-top:auto; margin-bottom:auto; margin-right:auto; margin-left:auto">Write a new post:
                             <button class="col mdl-button mdl-js-button mdl-button--fab mdl-shadow--4dp mdl-js-ripple-effec"
-                                style="background-color:#004d4d; color:white; margin-right:auto; margin-left:auto" id="add">
+                                style="background-color:#004d4d; color:white; margin-left:2%" id="add">
                                 <i class="material-icons">message</i>
                             </button></p>
                     </div>
                 </header>
 
-                <main class="mdl-layout__content mdl-color--grey-100">
+                <main class="mdl-layout__content mdl-color--red" style="width:100%">
 
                     <!-- Show the add post form -->
                     <section class="mdl-grid content" id="add-post" style="display:none">
@@ -1316,7 +1316,7 @@
 
                             <!-- Card containing the inputs to add a new messages -->
                             <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
-                                mdl-cell--6-col-desktop">
+                                mdl-cell--6-col-desktop" style="margin-right:auto; margin-left:auto">
                                 <div class="mdl-card__title" style="background-color: #008000; color:white; text-align:center; font-weight: bold" >
                                     <h2 class="mdl-card__title-text" style="font-weight:bold; margin-right:auto; margin-left:auto">New Post</h2>
                                 </div>
@@ -1358,72 +1358,72 @@
                         </div>
                     </section>
                     <!--/*AQUIShow Chat 1-->
-                    <section class="mdl-grid content" id="chat1" style="display:none; margin:0; padding:0">
-                        <div class="posts-container col-xs-12 mdl-grid" style="margin:0; padding:0">
+                    <section class="post-style mdl-grid content" id="chat1" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat2" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat2" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat3" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat3" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat4" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat4" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat5" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat5" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat6" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat6" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat7" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat7" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat8" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat8" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat9" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat9" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat10" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat10" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat11" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat11" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat12" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat12" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat13" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat13" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat14" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat14" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat15" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat15" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat16" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat16" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
-                    <section class="mdl-grid content" id="chat17" style="display:none">
-                        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+                    <section class="post-style mdl-grid content" id="chat17" style="display:none">
+                        <div class="posts-container col-xs-12 mdl-grid">
                         </div>
                     </section>
                 </main>

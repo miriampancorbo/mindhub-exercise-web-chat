@@ -44,6 +44,8 @@ var recentPostsSection = document.getElementById('recent-posts-list');
 var userPostsSection = document.getElementById('user-posts-list');
 var topUserPostsSection = document.getElementById('top-user-posts-list');
 var chatTitle = document.getElementById('chat-title');
+var barChat= document.getElementById('bar-chat');
+var logoChat= document.getElementById('logo-chat');
 //var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
 var chatSections = [];
@@ -388,6 +390,9 @@ function onAuthStateChanged(user) {
     splashPage.style.display = 'none';
     signOutButton.style.display = '';
     addButton.style.display = '';
+    chatTitle.style.display = '';
+    barChat.style.display = '';
+    logoChat.style.display = '';
     writeUserData(user.uid, user.displayName, user.email, user.photoURL);
     startDatabaseQueries();
   } else {
@@ -397,6 +402,9 @@ function onAuthStateChanged(user) {
     addButton.style.display = 'none';
     splashPage.style.display = '';
     signOutButton.style.display = 'none';
+    chatTitle.style.display = 'none';
+    barChat.style.display = 'none';
+    logoChat.style.display = 'none';
   }
 }
 
