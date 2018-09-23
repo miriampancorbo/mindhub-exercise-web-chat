@@ -115,12 +115,12 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
                   'mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">' +
         '<div class="mdl-card mdl-shadow--2dp">' +
           '<div class="mdl-card__title mdl-color--orange-600 mdl-color-text--white">' +
-            '<h4 class="mdl-card__title-text" style="font-weight:bold; align:center"></h4>' +
+            '<h4 class="mdl-card__title-text" style="font-weight:bold; text-align:center; margin-left:auto; margin-right:auto"></h4>' +
           '</div>' +
           '<div class="header">' +
             '<div>' +
               '<div class="avatar"></div>' +
-              '<div class="username" style="color:#004d4d; font-weight:bold"></div>' +
+              '<div class="username" style="color:#008000; font-weight:bold"></div>' +
             '</div>' +
           '</div>' +
           '<span class="star">' +
@@ -128,7 +128,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
             '<div class="starred material-icons" style="color:red;">favorite</div>' +
             '<span class="star-count" style="font-size:70%">0</span>' +
           '</span>' +
-          '<div class="text"></div>' +
+          '<div class="text" style="font-weight:bold; font-size:140%; color:#004d4d; text-align:center; margin-top:5%; margin-bottom:5%"></div>' +
           '<div class="comments-container"></div>' +
           '<form class="add-comment" action="#">' +
             '<div class="mdl-textfield mdl-js-textfield">' +
@@ -253,7 +253,7 @@ function updateStarCount(postElement, nbStart) {
 function addCommentElement(postElement, id, text, author) {
   var comment = document.createElement('div');
   comment.classList.add('comment-' + id);
-  comment.innerHTML = '<span class="username" style="color:black;"></span>: <span class="comment" style="color:blue;"></span>';
+  comment.innerHTML = '<span class="username" style="color:black; font-size:85%"></span>: <span class="comment" style="color:navy;"></span>';
   comment.getElementsByClassName('comment')[0].innerText = text;
   comment.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
 
