@@ -115,18 +115,18 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
                   'mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">' +
         '<div class="mdl-card mdl-shadow--2dp">' +
           '<div class="mdl-card__title mdl-color--orange-600 mdl-color-text--white">' +
-            '<h4 class="mdl-card__title-text"></h4>' +
+            '<h4 class="mdl-card__title-text" style="font-weight:bold; text-align:center"></h4>' +
           '</div>' +
           '<div class="header">' +
             '<div>' +
               '<div class="avatar"></div>' +
-              '<div class="username mdl-color-text--green"></div>' +
+              '<div class="username" style="color:#004d4d; font-weight:bold"></div>' +
             '</div>' +
           '</div>' +
           '<span class="star">' +
             '<div class="not-starred material-icons" style="color:black;">favorite_border</div>' +
             '<div class="starred material-icons" style="color:red;">favorite</div>' +
-            '<div class="star-count">0</div>' +
+            '<span class="star-count">0</span>' +
           '</span>' +
           '<div class="text"></div>' +
           '<div class="comments-container"></div>' +

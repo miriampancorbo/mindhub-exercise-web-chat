@@ -353,13 +353,12 @@ text-decoration: underline;
 #more-page{
   display:none;
 }
+
+/*CHAT-------------------------*/
 #chat-page{
   display:none;
 }
-/*
-#index-page{
-  display:none;
-}*/
+
 #sign-in-button{
   background-color:rgb(198, 216, 172);
   border:solid 2px black;
@@ -367,7 +366,6 @@ text-decoration: underline;
   margin-right: auto;
   margin-left: auto;
   margin-bottom:5%;
-  /*font-size: 200%;*/
 }
 #header-chat{
  margin:0;
@@ -382,10 +380,6 @@ text-decoration: underline;
 #chat-page{
   padding:0;
 }
-/*.sin-margen-ni-padding{
-  margin:0;
-  padding:0;
-}*/
 .color-active-chat {
   color:black;
   text-decoration: underline;
