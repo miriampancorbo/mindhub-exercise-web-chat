@@ -253,7 +253,7 @@ function updateStarCount(postElement, nbStart) {
 function addCommentElement(postElement, id, text, author) {
   var comment = document.createElement('div');
   comment.classList.add('comment-' + id);
-  comment.innerHTML = '<span class="username" style="color:black; font-size:85%"></span>: <span class="comment" style="color:navy;"></span>';
+  comment.innerHTML = '<span class="username" style="color:#008000; font-size:85%"></span>: <span class="comment" style="color:navy;"></span>';
   comment.getElementsByClassName('comment')[0].innerText = text;
   comment.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
 

@@ -1288,24 +1288,23 @@
 
                 <!-- Header section containing logo and menu -->
                 <header id="header-chat" style="padding:0; margin:auto">
-                    <div class="row " style="margin-bottom:4%;  margin-top:3%">
+                    <div class="row " style="margin-top:3%">
                             <h1 class="title col">
                                 <img class="photo-logo" src="photos/nysl_logo.png" alt="logo">
                                 <span id="chat-title"></span> </h1>
                         </div>
-                        <button id="sign-out-button" class="col-xs-12 col-sm-2 mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"
-                            style="background-color: rgb(235, 154, 123); border: solid 2px black"><i class="material-icons">account_circle</i>
+                        <button id="sign-out-button" class="col-xs-12 col-sm-4 col-md-2 mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"  align="right" 
+                            style="background-color: rgb(235, 154, 123); border: solid 2px black; margin-bottom:2%;"><i class="material-icons">account_circle</i>
                             Sign out</button>
                     </div>
 
                     <!-- Navigation Bar -->
-                    <div class="tab row bar-top-chat" style="background-color: #004d4d; color:white; margin-right:0">
-                        <div>
-                            <button class="col-xs-2 mdl-button mdl-js-button mdl-button--fab mdl-color--lime mdl-shadow--4dp mdl-js-ripple-effec"
-                                style="margin-left:5%" id="add">
+                    <div class="tab row bar-top-chat  align-items-center" style="background-color: rgb(211, 255, 200); color:#004d4d; margin-right:auto; margin-left:auto; margin-bottom:2%">
+                        <p class="col-xs align-items-center" align="center" style="font-size:130%; font-weight: bold; margin-top:auto; margin-bottom:auto; margin-right:auto; margin-left:auto">Write a new post:
+                            <button class="col mdl-button mdl-js-button mdl-button--fab mdl-shadow--4dp mdl-js-ripple-effec"
+                                style="background-color:#004d4d; color:white; margin-right:auto; margin-left:auto" id="add">
                                 <i class="material-icons">message</i>
-                            </button>
-                        </div>
+                            </button></p>
                     </div>
                 </header>
 
@@ -1331,7 +1330,7 @@
                                             <textarea class="mdl-textfield__input" rows="3" id="new-post-message"></textarea>
                                             <label class="mdl-textfield__label" for="new-post-message">Post message...</label>
                                         </div>
-                                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color:#008000; color:white">
                                             Add post
                                         </button>
                                     </form>
