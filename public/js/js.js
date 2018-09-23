@@ -130,7 +130,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
             '<div class="starred material-icons" style="color:red;">favorite</div>' +
             '<span class="star-count" style="font-size:70%">0</span>' +
           '</span>' +
-          '<div class="text" style="font-weight:bold; font-size:140%; color:#004d4d; text-align:center; margin-top:5%; margin-bottom:5%"></div>' +
+          '<div class="text" style="font-weight:bold; font-size:140%; color:#004d4d; text-align:center; margin:5%"></div>' +
           '<div class="comments-container"></div>' +
           '<form class="add-comment" action="#">' +
             '<div class="mdl-textfield mdl-js-textfield">' +
