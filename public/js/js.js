@@ -15,19 +15,6 @@
  */
 'use strict';
 
-/*var fbRef = new Firebase("https://footballnysl.firebaseapp.com/");
-fbRef.set({ "name": "Mir Panco", 
-          "email": "mir@yahoo.com" });
-
-fbRef.child("players/pbrown")
-.set({ "name": "Pat Brown", "email": "pbrown@yahoo.com" });
-
-var game = { "date": "Thu Mar 24 2016",
-  "opponents": "Green Ghosts",
-  "outcome": "win"
-};
-fbRef.child("games").push(game); //Crea un código "random". Usar esto para mensajes (?)*/
-
 // Shortcuts to DOM Elements.
 var chatNumber;
 var chatButtom;
@@ -35,7 +22,7 @@ var chatButtom;
 var messageForm = document.getElementById('message-form');
 var messageInput = document.getElementById('new-post-message');
 var titleInput = document.getElementById('new-post-title');
-var signInButton = document.getElementById('sign-in-button');
+var signInMailButton = document.getElementById('sign-in-mail-button');
 var signOutButton = document.getElementById('sign-out-button');
 var splashPage = document.getElementById('page-splash');
 var addPost = document.getElementById('add-post');
@@ -46,7 +33,6 @@ var topUserPostsSection = document.getElementById('top-user-posts-list');
 var chatTitle = document.getElementById('chat-title');
 var barChat= document.getElementById('bar-chat');
 var logoChat= document.getElementById('logo-chat');
-//var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
 var chatSections = [];
 for (let i = 1; i <= 17; i++) {
@@ -199,7 +185,7 @@ function createPostElement(postId, title, text, author, authorId, authorPic) {
   // Create new comment.
   addCommentForm.onsubmit = function(e) {
     e.preventDefault();
-    createNewComment(postId, firebase.auth().currentUser.displayName, uid, commentInput.value);
+    createNewComment(postId, firebase.auth().currentUser.displayName ? firebase.auth().currentUser.displayName : firebase.auth().currentUser.email, uid, commentInput.value);
     commentInput.value = '';
     commentInput.parentElement.MaterialTextfield.boundUpdateClassesHandler();
   };
@@ -338,7 +324,7 @@ function startDatabaseQueries() {
 }
 
 /**
- * Writes the UUSSEERRSS DDAATTAA to the database.000000000000000000000000000000000000000000000000000
+ * Writes the UUSSEERRSS DDAATTAA to the database.
  */
 // [START basic_write]
 function writeUserData(userId, name, email, imageUrl) {
@@ -415,7 +401,7 @@ function newPostForCurrentUser(title, text) {
   // [START single_value_read]
   var userId = firebase.auth().currentUser.uid;
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-    var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+    var username = (snapshot.val() && snapshot.val().username) || (snapshot.val() && snapshot.val().email)  || 'Anonymous';
     // [START_EXCLUDE]
     return writeNewPost(firebase.auth().currentUser.uid, username,
       firebase.auth().currentUser.photoURL,
@@ -447,12 +433,21 @@ function showSection(sectionElement) {
 
 // Bindings on load.
 window.addEventListener('load', function() {
-
-  // Bind Sign in button.
-  signInButton.addEventListener('click', function() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+  signInMailButton.addEventListener('click', function() {
+    var email = document.getElementById("mail").value;
+    var password = document.getElementById("password").value;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(data){
+      console.log("logged")
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
   });
+
   // Bind Sign out button.
   signOutButton.addEventListener('click', function() {
     firebase.auth().signOut();
